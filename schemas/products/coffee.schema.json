@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://foo.com/coffee.schema.json",
+  "title": "coffee",
+  "description": "JSON representation of a coffee",
+  "type": "object",
+  "allOf": [
+    {"$ref": "core.schema.json#/definitions/core"},
+    {
+      "type": "object",
+      "required": ["cuppingScore", "varietal"],
+      "properties": {
+        "cuppingScore": {
+          "type": "integer",
+          "minimum" : 0,
+          "maximum" : 100
+        },
+        "varietal": {
+          "type": "string",
+          "enum": ["Arabica", "Robusto", "Gheisha"]
+        }
+      }
+    }
+  ]
+}

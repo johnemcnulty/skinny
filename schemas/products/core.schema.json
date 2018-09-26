@@ -1,0 +1,35 @@
+{
+  "definitions": {
+    "core": {
+      "type": "object",
+      "required": [ "productType", "id", "owner", "created", "grams", "expiry"],
+      "properties": {
+        "productType": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "grams": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMinimum": true
+        },
+        "expiry": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

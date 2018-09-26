@@ -1,0 +1,17 @@
+<configuration>
+
+    <jmxConfigurator />
+
+    <property name="CONSOLEPATTERN" value="%date{ISO8601} %-5level %-42logger %msg%n"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${CONSOLEPATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <root level="TRACE">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

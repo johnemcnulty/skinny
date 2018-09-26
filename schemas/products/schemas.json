@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://foo.com/resource.schema.json",
+  "title": "core-resource",
+  "description": "JSON representation of a resource",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "productType": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [ "id", "owner" ],
+  "additionalProperties": true
+}

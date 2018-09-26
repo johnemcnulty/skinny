@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://foo.com/fish.schema.json",
+  "title": "fish",
+  "description": "JSON representation of a fish",
+  "type": "object",
+  "allOf": [
+    {"$ref": "core.schema.json#/definitions/core"},
+    {
+      "type": "object",
+      "required": ["vesselId", "catchDate"],
+      "properties": {
+        "vesselId": {
+          "type": "string"
+        },
+        "catchDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  ]
+}
